@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
-    map<string,set<string>> m;
+    map<string,vector<string>> m;
     vector<string> v;
     string key, value;
     while (cin >> value) {
         cin >> key;
-        m[key].insert(value);
+        m[key].push_back(value);
         if (find(v.begin(),v.end(),key) == v.end()) { //ไม่เจอ
             v.push_back(key);
         }
